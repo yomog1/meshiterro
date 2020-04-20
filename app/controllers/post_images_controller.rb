@@ -27,6 +27,7 @@ class PostImagesController < ApplicationController
 		post_image = PostImage.find(params[:id])
 		post_image.destroy
 		redirect_to post_images_path
+		
     end
 
     private
@@ -34,4 +35,5 @@ class PostImagesController < ApplicationController
         params.require(:post_image).permit(:shop_name, :image, :caption)
     end
 end
+
 
